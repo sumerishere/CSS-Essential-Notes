@@ -1,0 +1,320 @@
+ |        CSS_ESsential_topics         |
+ ---------------------------------------
+
+
+
+-------- LEVEL 1 --Basic Syntax------------
+
+1.Basic Syntax.
+2.Color property.
+3.Including styles.
+4.Comments
+5.MDN Documentation.
+6.Browser Tools.
+7.Selectors.
+
+-------------------------------------------
+
+---- LEVEL 2--BAckground-Color Property----
+
+1.BAckground-Color Property.
+2.COlor System.
+3.Absolute Units.
+4.Height & Width Property.
+5.BAckground-Image Property.
+6.Visibility Property.
+
+------------------------------------------
+
+---- LEVEL 3--Text-Align Property--
+
+1.Text-Align Property.
+2.TExt-decoration.
+3.TExt-Transform.
+4.Line-Heigth Property.
+5.FOnt Property.
+6.Icon using Fonts.
+
+------------------------------------------
+
+---------- LEVEL 4--Box Model ------------
+
+1.What is BOX Model.
+2.Padding Property.
+3.Margin Property.
+4.Border Property.
+
+BOX Model:
+                          TOP
+     ----------------------------------------------- 
+     |                  MARGIN                     |
+     |    -------------------------------------    |
+     |    |           BORDER                  |    |
+     |    |    ---------------------------    |    |
+     |    |    |          PADDING        |    |    |
+     |    |    |   ------------------    |    |    |
+     |    |    |   |                |    |    |    |    
+ LEFT|    |    |   |     CONTENT    |    |    |    | RIGHT
+     |    |    |   |                |    |    |    | 
+     |    |    |   |                |    |    |    | 
+     |    |    |   ------------------    |    |    |
+     |    |    |                         |    |    |
+     |    |    ---------------------------    |    |
+     |    |                                   |    | 
+     |    -------------------------------------    |
+     |                                             |
+     -----------------------------------------------
+                         BOTTOM
+
+
+
+------------------------------------------------------------------------------
+
+
+
+----------- LEVEL 5--Display and Position ------------
+
+
+1. Display Property.
+    - Block elements(takes full horizontal space).
+    - In-line elements(Space adjustable).
+
+2. Responsive Websites.
+    - adapt any screen device.
+
+3. Relative Units.
+    - % --> relative to parent element takes 50% of parent size.
+    - em --> can define font size in multiple of parent elem.
+    - rem --> can define font size in multiple of root elem.
+    - px --> can override the text size of child.
+
+4. Position Property.
+    - Static --> Default to browser.
+    - Relative(start from page corner)--> Adjusted elem position from it's     
+      normal.
+    - Absolute  --> Position elem relative to nearest posn of ancester.
+    - Fixed (start from page corner)--> Elem posin relative to viewport and 
+      doesn't move on scroll.
+
+5. Z-index property-->default_val--> 0.
+    - Stacking order :determine the stacking order of elements along 
+      the z-axis.
+    - position context: only applies to elem with position set to relative
+      absolute, fixed, or sticky.
+    - Integer values: Accepts integer values, including negative numbers.
+    - Higher values : An elem with a higher z-index value appears above     
+      others.
+
+ 
+5. Semantic Tags(SEO Specific point of view).
+   - <div> non semantic  vs  <header> semantic.
+   - <span> non semantic  vs  <article> semantic.
+   - <i> non semantic  vs  <figure> semantic.
+   - <b> non semantic  vs  <footer> semantic.
+
+   - the major diff betn div and semantic tag is div tag causes the  
+     performance down of SEO of site where as semantic tags increases. 
+
+
+   - Meaningful: Describe content.
+   - SEO : Good for search engine.
+   - Accessibility : Useful for screen and readers. 
+   - Examples : <header>, <footer>, <article>, <section>, <nav>.
+
+
+
+----------------- LEVEL 6--Flex box, Grid and Media Queries ------------------
+
+
+1. Float Property.
+   - It's important to note that the use of floats has become somewhat less  
+     common with the advent of more modern layout techniques such as Flexbox  
+     and Grid. These newer layout methods provide more powerful and flexible
+     options for creating complex layouts compared to the somewhat limited 
+     nature of floats. However, understanding floats is still relevant for    
+     working with older codebases and for achieving specific layout  
+     requirements.
+
+2. What is Flexbox.
+   
+   - flexbox is a 1-D layout method for arranging items in row or colmns.
+   - Items flex (expand) to fill additional space or shrink to fit into    
+     smaller spaces.
+
+3. Flex model.
+   - default direction of flex is left to right and it also customizable.
+   - example :-
+
+                              cross strt
+           ________________________ __
+          | flex container         !  |
+          |  _________   _________ !  |
+          |  | flex  |   |       | !  |
+          |  |or item|   | same  | !  | 
+          |  |_______|   |_______| !  |
+main strt -------------------------!----> main axis (justify-content: )
+          |________________________!__|
+                                   !
+                               cross axis(align-items: )
+
+
+4. Flexbox direction.
+   - flex-direction is property use to define direction in the flex container.
+   - row value aligns the flex items horizontally, in a left-to-right fashion.
+   - colmn value stacks the flex items vertically, from top to bottom.
+   - reverse dirc adding-reverse to row or colmn (in row rev or in colmn rev)
+     reverses the order of the items.
+
+5. Properties : Flexbox container.
+   - justify content.
+   - flex wrap: no-wrap, wrap(next row), wrap-rev(most recent first).
+   - Align items --> (adjusting whole items position).
+   - Align content --> (aligning spaces betwn items).
+  
+
+6. Properties : Flex items.
+   - Align safe.
+     - Allows individual flex items to override the container's align-items 
+        property, aligning them diff along the cross-axis.
+
+   - Flex shrink (default equally set).
+     - this determines how much a flex item will shrink relative to other in 
+        flex container is there is insufficient space.
+
+   - Flex grow.
+     - vice-verssa of flex shrink.
+
+   - Order (item position order).
+     - order in css allows you to define the sequence in which flex items   
+        appear within the flex container, overriding their orignal order 
+        in the html.
+
+7. Grid layout.
+   - 2D layout system for rows & colmn.
+   - Active with display : grid;.
+   - Children become grid items.
+   - define structure with grid-template property.
+   - individual units called grid cells.
+
+8. Media queries. 
+   - Tailor styles for specific device charecterstics.
+   - Use to create responsive web designs.
+   - Apply styles based on conditions like screen size.
+   - width.
+     - for perticular screen.
+   - min-width.
+     - for perticular screen range
+   - max-width.
+     - vice-versa of min-width.
+   - combination of media queries.
+     - declearing perticular range using min and/or max width.
+
+
+  Syntax:
+         @media media_type and (condition) {CSS rules}.
+         media_type : screen (default).
+
+  for eg :
+          @media screen and (max-width:768px) { 
+                                              .container{ 
+                                                          /*css styles */
+                                                         } 
+                                               }
+
+
+
+----------------- LEVEL 7-- Animation, Transition & Transform-------------------
+
+
+1. Pseudo Classes.
+   - Used to define special states of html elements.
+   - Syntax : selector : pseudo-class { styles }.
+   - Common examples: :hover, :active, :first-child.
+   - Target elelmets based on their position or used action.
+ 
+
+2. Transitions.
+   - CSS transition is property that enables smooth animation between changes in
+      CSS property values.
+   - Transition-property : define which css properties will transition.
+   - Transition-duration : Sets how long the transition lats.
+   - Transition-timing-function : Controls the speed curve of the transition.
+   - Transition-delay : Specifies a delay before the transition starts.
+
+
+3. CSS Transform.
+   - Allows modification of an element's shape and position.
+   - Can perform operations like rotate, scale, skew and translate.
+   - Does not affect the layout of surrounding elements.
+   - Used to create visual effects and transformations.
+
+   - Rotate().
+     - rotates an elem around a fixed point.
+     - defines using the rotate() function within the transform property.
+     - default rotation point is the elemt's center.
+
+   - Scale().
+     - Scale an elem around a fixed point.
+
+   - Translate(x-axis , y-axis)--> or for single value as default (x-axis).
+     - shifting the component or make it movable while hovering.
+     - or make component nature as a dynamic.
+    
+   - Skew(angle deg). 
+     - skew the components or items as per given degree of angle.
+
+
+4. Animation.
+   - animation name : specifies the name of the @keyframes defined animation.
+
+   - animation duration : define the total time the animation takes to complete   
+                          one cycle.
+
+   - animation-timing-function : controls the pacing of the  
+                                 animation(eg:linear,ease-in).
+
+   - animation-delay : sets a delay before the animation starts, allowing for 
+                       pause before initiation. 
+
+   - animation-iteration-count : indicate the number of times the animation  
+                                 should repeat.
+
+   - animation-direction : specifies the direction of the animation, allowing for  
+                           reverse for reverse or alternate cycles.
+
+ Syntax: 
+          @keyframes animation-name{
+
+            from {
+                   /*  CSS code */
+            }
+            to {
+                 /* CSS code */
+            } 
+
+                   OR
+
+            0% {left: 10px; top: 0px}    --> 4s
+
+            50% {left: 150px; top: 100px}     -->2s
+               --and so on till 100%
+
+            100% {left: 300px; top: 0px}      --> 4s */
+
+          }
+        
+
+
+----------------------------- THANK YOU ('-') -----------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
